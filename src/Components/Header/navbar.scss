@@ -1,0 +1,52 @@
+a.nav:hover{
+    color:#ff97c8;
+    font-weight: bold;
+    text-shadow: 5px 5px #b269a6b1 ;
+}
+
+a.nav {
+    color: #ebe4ec;
+}
+
+.nav-bar {
+    position: absolute;
+    width:  100vw;
+    z-index: 1;
+    background-color: transparent;
+    padding-right: 4em;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: flex-end;
+}
+
+.nav li {
+    width: 15%;
+    font-size: large;
+    text-overflow: clip;
+    font-family: 'Concert One';
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(111, 57, 94);
+}
+
+@media (max-width: 900px) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-start;
+        justify-content: space-around;
+        font-size: medium;
+        text-align: center;
+    }
+}
+

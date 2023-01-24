@@ -1,0 +1,122 @@
+$header-img: image-url('./../../pics/water2.jpg', false, false);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+
+
+.banner {
+  display: flex;
+  width: 100%;
+  height: 102vh;
+}
+
+.back {
+  background: $header-img;
+  transform: "scale(1.2)";
+  position: "absolute";
+  filter: "blur(4px) brightness(50%)";
+  width: "100%";
+  height: "100%";
+}
+
+@function textShadow($precision, $size, $color) {
+  $value: null;
+  $offset: 0;
+  $length: $size * (1 / $precision) - 1;
+
+  @for $i from 0 through $length {
+    $offset: $offset +$precision;
+    $shadow: $offset +px $offset +px $color;
+    $value: append($value, $shadow, comma);
+  }
+
+  @return $value;
+}
+
+$front1: #7f9fe9;
+$back1: #bf8ed2;
+$front2: #ce96b7;
+$back2: #b269a6;
+$front3: #8291e4;
+$back3: #81afdd;
+$front5: #e382d3;
+$back5: #747ed9;
+$front: #8cadd3;
+$back: #6570cf;
+
+
+.test {
+  position: fixed;
+  z-index: 10;
+  top: 5vh
+}
+
+.playful {
+  font-size: 6vw;
+}
+
+.playful span {
+  position: relative;
+  color: $front1;
+  text-shadow: textShadow(0.25, 6, $back1);
+  animation: scatter 1.75s infinite;
+}
+
+.playful span:nth-child(2n) {
+  color: $front2;
+  text-shadow: textShadow(0.25, 6, $back2);
+  animation-delay: 0.3s;
+}
+
+.playful span:nth-child(3n) {
+  color: $front3;
+  text-shadow: textShadow(0.25, 6, $back3);
+  animation-delay: 0.15s;
+}
+
+.playful span:nth-child(5n) {
+  color: $front5;
+  text-shadow: textShadow(0.25, 6, $back5);
+  animation-delay: 0.4s;
+}
+
+.playful span:nth-child(7n),
+.playful span:nth-child(11n) {
+  color: $front;
+  text-shadow: textShadow(0.25, 6, $back );
+  animation-delay: 0.25s;
+}
+
+@keyframes scatter {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -10px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .mouseParalax {
+    justify-content: space-evenly;
+  }
+
+  .playful {
+    font-size: 10vw;
+  }
+
+  .test {
+    top: 15vh;
+  }
+
+  .img {
+    width: 100vw;
+  }
+
+}

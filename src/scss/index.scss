@@ -1,0 +1,56 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+$bubbles: image-url('../pics/bubbles.png', false, false);
+body {
+    font-family: 'Concert One';
+    background-color: #10083c;
+    overflow-x: hidden;
+    overflow: overlay;
+    scroll-behavior: smooth;
+    background-image: $bubbles;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+$page-background: transparent;
+$scrollbar-track: transparent;
+$scrollbar-thumb: #ce96b7;
+$scrollbar-thumb-hover: #b269a6;
+
+$scrollbar-width: 10px;
+
+/* Default (light theme */
+
+* {
+    scrollbar-width: thin;
+    /* none | auto  */
+    scrollbar-color: $scrollbar-thumb $scrollbar-track;
+}
+
+/* Firefox */
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+    width: $scrollbar-width;
+    /* vertical scrollbar */
+    height: $scrollbar-width;
+    /* horizontal scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+   display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb;
+    border-radius: $scrollbar-width;
+    border: calc($scrollbar-width / 4) solid $page-background;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: $scrollbar-thumb-hover;
+}

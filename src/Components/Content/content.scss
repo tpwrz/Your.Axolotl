@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+.header {
+    font-family: Concert One;
+    position: sticky;
+    color: #7b7b7b;
+    width: 100vw;
+    display: flex;
+    top: 0em;
+    font-size: x-large;
+    padding: 0.2em;
+    justify-content: center;
+    background-color: #f1f4f6f4;
+    text-decoration: none;
+}
+
+.header:hover{
+    cursor: pointer;
+}
+html{
+    scroll-behavior: smooth;
+}
